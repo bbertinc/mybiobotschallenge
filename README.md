@@ -45,9 +45,12 @@ Solve with:
 > exit()
 ```
 
+You can then obtain the SITE_ID string from:
+
 ```bash
 > python manage.py tellsiteid
 
 The default site's ID is u'57c4b5a4393d508ac41f0cde'. To use the sites framework, add this line to settings.py:
 SITE_ID=u'57c4b5a4393d508ac41f0cde'
 ```
+Update SITE_ID in settings.py
