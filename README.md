@@ -1,7 +1,7 @@
 ## Prototype web app for Biobots Code Challenge
 
 This is a rough prototype to read through the bioprinter prints dataset "bioprint-data.json".
-The data is ingested in a mongoDB collection and accessed through an app built with Django.
+The data is ingested in a __mongoDB__ collection and accessed through an app built with __Django__.
 
 ## MongoDB Database initialization
 
