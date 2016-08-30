@@ -1,0 +1,10 @@
+<h1>Bioprint Viewer</h1>
+<br>
+
+<form action="{% url 'bioprintviewer:index' %}" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <!--<label for="user_id">User ID: </label>
+  <input id="user_id" type="text" name="user_id" value="">-->
+  <input type="submit" value="OK" />
+</form>

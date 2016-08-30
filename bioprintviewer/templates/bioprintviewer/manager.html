@@ -1,0 +1,11 @@
+<h1>Bioprint Viewer - List of Users (admin page)</h1>
+</br>
+
+<a href="/bioprintviewer/">HOME</a>
+<br>
+
+<ul>
+  {% for user_id in user_ids %}
+    <li><a href="{% url 'bioprintviewer:user' user_id %}">{{ user_id }}</a></li>
+  {% endfor %}
+</ul>

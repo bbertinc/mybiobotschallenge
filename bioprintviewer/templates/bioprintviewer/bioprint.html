@@ -1,0 +1,72 @@
+<h1>{{ user_id }}'s bioprints for {{ print.print_info.files.input }}</h1>
+<a href="/bioprintviewer/{{ user_id }}/"><- back</a>
+<br>
+
+<p><strong>Output:</strong> {{ print.print_info.files.output }}</p>
+<br>
+
+<table style="border:1px solid black">
+  <caption>Print Results</caption>
+  <tr>
+    <th>livePercent</th>
+    <td>{{ print.print_data.livePercent }}</td>
+  </tr>
+  <tr>
+    <th>deadPercent</th>
+    <td>{{ print.print_data.deadPercent }}</td>
+  </tr>
+  <tr>
+    <th>elasticity</th>
+    <td>{{ print.print_data.elasticity }}</td>
+  </tr>
+</table>
+<br>
+
+<table style="border:1px solid black">
+  <caption>Print Parameters</caption>
+  <tr>
+    <th >Wellplate</th>
+    <td>{{ print.print_info.wellplate }}</td>
+  </tr>
+  <tr>
+    <th colspan=2 style="border:1px solid black">Pressure [kPa]</th>
+  </tr>
+  <tr>
+    <th>Extruder1</th>
+    <td>{{ print.print_info.pressure.extruder1 }}</td>
+  </tr>
+  <tr>
+    <th>Extruder2</th>
+    <td>{{ print.print_info.pressure.extruder2 }}</td>
+  </tr>
+
+  {% if print.print_info.crosslinking.cl_enabled == True %}
+  <tr>
+    <th colspan=2 style="border:1px solid black">Crosslinking</th>
+  </tr>
+  <tr>
+    <th>duration [ms]</th>
+    <td>{{ print.print_info.crosslinking.cl_duration }}</td>
+  </tr>
+  <tr>
+    <th>intensity</th>
+    <td>{{ print.print_info.crosslinking.cl_intensity }}</td>
+  </tr>
+  {% endif %}
+
+  <tr>
+    <th colspan=2 style="border:1px solid black">Resolution</th>
+  </tr>
+  <tr>
+    <th>Number of Layers</th>
+    <td>{{ print.print_info.resolution.layerNum }}</td>
+  </tr>
+  <tr>
+    <th>Layer height [mm]</th>
+    <td>{{ print.print_info.resolution.layerHeight }}</td>
+  </tr>
+
+</table>
+<br>
+
+<a href="/bioprintviewer/{{ user_id }}/"><- back</a>

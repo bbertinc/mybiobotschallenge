@@ -1,0 +1,14 @@
+<h1>{{ user_id }}'s bioprints</h1>
+<br>
+
+<a href="/bioprintviewer/">HOME</a>
+<br>
+
+{% for serial in serials %}
+  <h3>Bioprinter Serial #: {{ serial }}</h3>
+  <ul>
+    {% for print in prints %}
+      <li><a href="{{ serial }}/{{ print.file }}">{{ print.file }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
